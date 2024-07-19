@@ -10,18 +10,26 @@ With multiple agents, handle new and returning Users
 - recognize returning users, have agent prompts/responses account for past conversations and app usage
   - RAG implementation
 
-### Steel Thread 
+### Steel Thread
+
+**v0**
 
 1. inbound calls supported via "welcome agent" (WA)
-2. capture incoming phone number 
-3. see if new number or existing number (new or returning user)
-4. if new user
+2. capture incoming phone number
+
+**v1**
+
+4. see if new number or existing number (new or returning user)
+5. if new user
    - create new User profile, phone # as GUID
    - WA gathers name, age, and location in initial prompt(s)
    - attach name, age, and location to User profile
    - WA attempts to "bucket" user based on their use case: transpo, food, rx (for now) - store as userType or such
      - prompt engineer this stage; rough and straight forward for now
-**todo v2**
+    
+
+**v2**
+
 5. if returning user
    - route to appropiate Agent based on userType
      - separate agent for each bucket/use case/user type: transpo, food, rx (for now)
