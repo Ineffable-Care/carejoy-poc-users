@@ -4,10 +4,11 @@ With multiple agents, handle new and returning Users
 ## Tactics
 - have a Welcome Agent (WA) that is our single point of entry (i.e., Gatekeeper architecture)
 - use phone numbers as GUIDs for User(s)
-- through prompt engineering, enrich user profile from user's responses
+- through prompt engineering, enrich user profile from users' responses
 - quickly determine reason person is calling, then route them to specific, separate Agent that specializes in each main app functionality
   - transpo, food, rx
-- recognize returning users, have agent prompts/responses account for past conversations and app usage (RAG implementation)
+- recognize returning users, have agent prompts/responses account for past conversations and app usage
+  - RAG implementation
 
 ### Steel Thread 
 
@@ -20,10 +21,12 @@ With multiple agents, handle new and returning Users
    - attach name, age, and location to User profile
    - WA attempts to "bucket" user based on their use case: transpo, food, rx (for now) - store as userType or such
      - prompt engineer this stage; rough and straight forward for now
+**todo v2**
 5. if returning user
-   - <ToDo v2>
-   - e.g., route to appropiate Agent based on userType
+   - route to appropiate Agent based on userType
      - separate agent for each bucket/use case/user type: transpo, food, rx (for now)
+   - use previous conversation as app/prompt context
+     - RAG
     
 #### Extensions
 - suggest solutions based on stored used data (e.g., "would you like a car sent to your home to pick you up? {use home address for concierge Uber]'
